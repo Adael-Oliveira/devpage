@@ -152,6 +152,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s ease;
     border: none;
     border-radius: 0.75rem;
+    margin: 0; /* Remove margens padrão */
 }
 
 .portfolio-card:hover {
@@ -164,9 +165,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-slider .swiper-slide {
-    padding-bottom: 50px; /* Space for pagination */
+    padding-bottom: 20px; /* Reduz o espaço para paginação, ajustado de 50px para 20px */
+    margin: 0 10px; /* Define um espaçamento lateral mínimo entre slides */
 }
-
 /* --- Swiper General Styles --- */
 .swiper-pagination-bullet {
     width: 12px;
