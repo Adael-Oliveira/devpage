@@ -1,0 +1,438 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPage - Criação de Sites e Landing Pages</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#main-nav">
+
+    <!-- Cabeçalho -->
+    <header id="header" class="fixed-top">
+        <nav id="main-nav" class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="/logodevpage.png" alt="DevPage Logo" style="height: 40px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#planos">Planos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Portfólio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="d-flex align-items-center text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="display-3 fw-bold text-white reveal-up">Transforme Sua Presença Online</h1>
+                        <p class="lead text-white-50 my-4 reveal-up" style="--delay: 0.2s;">Sites institucionais e landing pages sob medida para empresas, comércios e profissionais que querem vender mais.</p>
+                        <div class="reveal-up" style="--delay: 0.4s;">
+                            <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." class="btn btn-primary btn-lg mx-2 my-2"><i class="fab fa-whatsapp"></i> Solicitar Orçamento no WhatsApp</a>
+                            <a href="#portfolio" class="btn btn-outline-light btn-lg mx-2 my-2">Ver Portfólio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Por que escolher a DevPage -->
+        <section id="features" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5 reveal-down">
+                    <h2 class="fw-bold">Por que escolher a DevPage?</h2>
+                    <p class="text-muted">Entregamos mais do que um site, criamos uma ferramenta de vendas para o seu negócio.</p>
+                </div>
+                <div class="row text-center g-4">
+                    <div class="col-lg-3 col-md-6 reveal-up">
+                        <div class="card h-100 shadow-sm border-0 p-4">
+                            <div class="feature-icon mb-3"><i class="fas fa-palette"></i></div>
+                            <h5 class="fw-bold">Design Moderno e Responsivo</h5>
+                            <p class="text-muted">Sites visualmente incríveis que funcionam perfeitamente em qualquer dispositivo.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 reveal-up" style="--delay: 0.1s;">
+                        <div class="card h-100 shadow-sm border-0 p-4">
+                            <div class="feature-icon mb-3"><i class="fas fa-rocket"></i></div>
+                            <h5 class="fw-bold">Rápidos e Otimizados</h5>
+                            <p class="text-muted">Performance de ponta para uma melhor experiência do usuário e ranking no Google.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 reveal-up" style="--delay: 0.2s;">
+                        <div class="card h-100 shadow-sm border-0 p-4">
+                            <div class="feature-icon mb-3"><i class="fas fa-bullseye"></i></div>
+                            <h5 class="fw-bold">Foco em Conversão</h5>
+                            <p class="text-muted">Botões e chamadas estratégicas para transformar visitantes em clientes.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 reveal-up" style="--delay: 0.3s;">
+                        <div class="card h-100 shadow-sm border-0 p-4">
+                            <div class="feature-icon mb-3"><i class="fas fa-headset"></i></div>
+                            <h5 class="fw-bold">Suporte e Atendimento</h5>
+                            <p class="text-muted">Estamos sempre próximos para ajudar sua empresa a crescer e evoluir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Planos -->
+        <section id="planos" class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5 reveal-down">
+                    <h2 class="fw-bold">Planos que se encaixam no seu bolso</h2>
+                    <p class="text-muted">Escolha a opção ideal para o seu momento. Clique em um plano para ver mais detalhes.</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <!-- Plano Basic -->
+                    <div class="col-lg-3 col-md-6 reveal-up">
+                        <div class="card plan-card h-100 text-center" data-bs-toggle="modal" data-bs-target="#planModal"
+                             data-plan-name="Basic"
+                             data-plan-price="R$179,00<span class='fs-6 text-muted'>/mês</span>"
+                             data-plan-sub="sem fidelidade, cancele quando quiser"
+                             data-plan-features='[
+                                {"item": "Landing page personalizada", "included": true},
+                                {"item": "Hospedagem e domínio inclusos", "included": true},
+                                {"item": "Certificado de Segurança (SSL)", "included": true},
+                                {"item": "Botão flutuante do WhatsApp", "included": true},
+                                {"item": "Até 2 páginas adicionais", "included": false},
+                                {"item": "Até 3 edições anuais", "included": false},
+                                {"item": "Alterações adicionais: +R$119,00/mês", "included": true}
+                             ]'>
+                            <div class="card-header bg-transparent border-0 pt-4">
+                                <h4 class="fw-bold">Basic</h4>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title fw-bold">R$179,00<span class="fs-6 text-muted">/mês</span></h3>
+                                <p class="text-muted">sem fidelidade</p>
+                                <ul class="list-unstyled my-4 text-start plan-feature-list">
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Landing page personalizada</li>
+                                    <li><i class="fas fa-times-circle text-muted me-2"></i>Até 2 páginas adicionais</li>
+                                    <li><i class="fas fa-times-circle text-muted me-2"></i>Até 3 edições anuais</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Alterações: +R$119,00/mês</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pb-4">
+                                <a href="#" class="btn btn-outline-primary">Saber Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Plano Start -->
+                    <div class="col-lg-3 col-md-6 reveal-up" style="--delay: 0.1s;">
+                        <div class="card plan-card plan-popular h-100 text-center" data-bs-toggle="modal" data-bs-target="#planModal"
+                             data-plan-name="Start (Mais Popular)"
+                             data-plan-price="R$800,00<span class='fs-6 text-muted'>/ano</span>"
+                             data-plan-sub="economia de R$1.348,00 | até 10x sem juros"
+                             data-plan-features='[
+                                {"item": "Landing page personalizada", "included": true},
+                                {"item": "Até 2 páginas adicionais", "included": true},
+                                {"item": "Hospedagem e domínio inclusos", "included": true},
+                                {"item": "Certificado de Segurança (SSL)", "included": true},
+                                {"item": "Botão flutuante do WhatsApp", "included": true},
+                                {"item": "Até 3 edições anuais", "included": true},
+                                {"item": "Alterações adicionais: +R$99,00", "included": true}
+                             ]'>
+                             <div class="plan-badge">Mais Popular</div>
+                            <div class="card-header bg-transparent border-0 pt-4">
+                                <h4 class="fw-bold">Start</h4>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title fw-bold">R$800,00<span class="fs-6 text-muted">/ano</span></h3>
+                                <p class="text-muted">até 10x sem juros</p>
+                                <ul class="list-unstyled my-4 text-start plan-feature-list">
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Landing page personalizada</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Até 2 páginas adicionais</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Até 3 edições anuais</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Alterações adicionais: +R$99,00</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pb-4">
+                                <a href="#" class="btn btn-primary">Saber Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Plano Premium -->
+                    <div class="col-lg-3 col-md-6 reveal-up" style="--delay: 0.2s;">
+                        <div class="card plan-card h-100 text-center" data-bs-toggle="modal" data-bs-target="#planModal"
+                             data-plan-name="Premium"
+                             data-plan-price="R$1600,00<span class='fs-6 text-muted'>/ano</span>"
+                             data-plan-sub="até 12x sem juros"
+                             data-plan-features='[
+                                {"item": "Landing page personalizada", "included": true},
+                                {"item": "Até 4 páginas adicionais", "included": true},
+                                {"item": "Hospedagem e domínio inclusos", "included": true},
+                                {"item": "Certificado de Segurança (SSL)", "included": true},
+                                {"item": "Botão flutuante do WhatsApp", "included": true},
+                                {"item": "Até 6 edições anuais", "included": true},
+                                {"item": "Alterações adicionais: +R$69,00", "included": true}
+                             ]'>
+                             <div class="card-header bg-transparent border-0 pt-4">
+                                <h4 class="fw-bold">Premium</h4>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title fw-bold">R$1600,00<span class="fs-6 text-muted">/ano</span></h3>
+                                <p class="text-muted">até 12x sem juros</p>
+                                <ul class="list-unstyled my-4 text-start plan-feature-list">
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Landing page personalizada</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Até 4 páginas adicionais</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Até 6 edições anuais</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Alterações adicionais: +R$69,00</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pb-4">
+                                <a href="#" class="btn btn-outline-primary">Saber Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Plano Pro -->
+                    <div class="col-lg-3 col-md-6 reveal-up" style="--delay: 0.3s;">
+                        <div class="card plan-card h-100 text-center" data-bs-toggle="modal" data-bs-target="#planModal"
+                             data-plan-name="Pro"
+                             data-plan-price="Sob demanda"
+                             data-plan-sub="Para projetos complexos e necessidades específicas"
+                             data-plan-features='[
+                                {"item": "Total liberdade de customização", "included": true},
+                                {"item": "Código-fonte entregue ao cliente", "included": true},
+                                {"item": "Múltiplas integrações (APIs)", "included": true},
+                                {"item": "Consultoria estratégica", "included": true},
+                                {"item": "Painel de gerenciamento", "included": true},
+                                {"item": "Suporte prioritário", "included": true}
+                             ]'>
+                             <div class="card-header bg-transparent border-0 pt-4">
+                                <h4 class="fw-bold">Pro</h4>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title fw-bold">Sob demanda</h3>
+                                <p class="text-muted"><i class="fas fa-briefcase"></i> Para projetos complexos</p>
+                                <ul class="list-unstyled my-4 text-start plan-feature-list">
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Total liberdade de customização</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Código-fonte entregue</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Múltiplas integrações</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Consultoria estratégica</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pb-4">
+                                <a href="#" class="btn btn-outline-primary">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfólio -->
+        <section id="portfolio" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5 reveal-down">
+                    <h2 class="fw-bold">Nosso Portfólio</h2>
+                    <p class="text-muted">Confira alguns dos projetos que criamos.</p>
+                </div>
+                <div class="swiper portfolio-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="card portfolio-card shadow-sm h-100">
+                                <img src="portfolio1.png" class="card-img-top" alt="Projeto 1">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Clínica Odontológica</h5>
+                                    <a href="https://youtube.com" target="_blank" class="btn btn-outline-primary mt-2"><i class="fab fa-youtube me-2"></i>Ver no YouTube</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide h-auto">
+                             <div class="card portfolio-card shadow-sm h-100">
+                                <img src="portfolio2.png" class="card-img-top" alt="Projeto 2">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Escritório de Advocacia</h5>
+                                    <a href="https://youtube.com" target="_blank" class="btn btn-outline-primary mt-2"><i class="fab fa-youtube me-2"></i>Ver no YouTube</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide h-auto">
+                             <div class="card portfolio-card shadow-sm h-100">
+                                <img src="portfolio3.png" class="card-img-top" alt="Projeto 3">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Restaurante Italiano</h5>
+                                    <a href="https://youtube.com" target="_blank" class="btn btn-outline-primary mt-2"><i class="fab fa-youtube me-2"></i>Ver no YouTube</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 (Clone for loop) -->
+                        <div class="swiper-slide h-auto">
+                            <div class="card portfolio-card shadow-sm h-100">
+                                <img src="portfolio1.png" class="card-img-top" alt="Projeto 1">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Clínica Odontológica</h5>
+                                    <a href="https://youtube.com" target="_blank" class="btn btn-outline-primary mt-2"><i class="fab fa-youtube me-2"></i>Ver no YouTube</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Add Pagination -->
+                    <div class="swiper-pagination portfolio-pagination"></div>
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-prev portfolio-nav-prev"></div>
+                    <div class="swiper-button-next portfolio-nav-next"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section id="depoimentos" class="py-5 bg-light">
+            <div class="container reveal-down">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">O que nossos clientes dizem</h2>
+                </div>
+                <div class="swiper testimonials-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item text-center">
+                                <img src="client1.png" class="testimonial-img" alt="Cliente 1">
+                                <h5 class="mt-3 mb-0">Ana Paula</h5>
+                                <p class="text-muted">CEO, Clínica Sorria</p>
+                                <p class="fst-italic mt-3">"A DevPage superou nossas expectativas! O site ficou lindo, rápido e já estamos recebendo muitos contatos pelo WhatsApp. Atendimento nota 10!"</p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                         <div class="swiper-slide">
+                            <div class="testimonial-item text-center">
+                                <img src="client2.png" class="testimonial-img" alt="Cliente 2">
+                                <h5 class="mt-3 mb-0">Marcos Lins</h5>
+                                <p class="text-muted">Advogado</p>
+                                <p class="fst-italic mt-3">"Profissionalismo exemplar. Entenderam perfeitamente a sobriedade que meu site de advocacia precisava, sem abrir mão da modernidade. Recomendo!"</p>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                         <div class="swiper-slide">
+                            <div class="testimonial-item text-center">
+                                <img src="client3.png" class="testimonial-img" alt="Cliente 3">
+                                <h5 class="mt-3 mb-0">Juliana Costa</h5>
+                                <p class="text-muted">Dona, Sapore D'Italia</p>
+                                <p class="fst-italic mt-3">"O novo site do restaurante ficou fantástico e ajudou a aumentar nossas reservas online. A equipe da DevPage é muito atenciosa e prestativa."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination testimonials-pagination"></div>
+                    <div class="swiper-button-prev testimonials-nav-prev"></div>
+                    <div class="swiper-button-next testimonials-nav-next"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chamada Final (CTA) -->
+        <section id="cta" class="py-5 text-center text-white">
+            <div class="container reveal-up">
+                <h2 class="display-5 fw-bold">Fale agora com a DevPage e tenha seu site pronto em poucos dias</h2>
+                <p class="lead my-4">Vamos juntos construir sua presença digital de sucesso.</p>
+                <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." class="btn btn-light btn-lg mb-3"><i class="fab fa-whatsapp"></i> Chamar no WhatsApp</a>
+                <div class="mt-4 social-links-cta">
+                    <a href="https://instagram.com" target="_blank" class="btn btn-outline-light btn-sm mx-1"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://youtube.com" target="_blank" class="btn btn-outline-light btn-sm mx-1"><i class="fab fa-youtube"></i> YouTube</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Rodapé -->
+    <footer id="contato" class="py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <a class="navbar-brand" href="#">
+                        <img src="/logodevpage.png" alt="DevPage Logo" style="height: 35px;">
+                    </a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="mb-0">&copy; 2024 DevPage. Todos os direitos reservados.</p>
+                    <p class="mb-0 text-muted small">contato@devpage.com</p>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <a href="https://instagram.com" class="text-dark fs-4 mx-2"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com" class="text-dark fs-4 mx-2"><i class="fab fa-youtube"></i></a>
+                    <a href="https://wa.me/5511999999999" class="text-dark fs-4 mx-2"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Planos -->
+    <div class="modal fade" id="planModal" tabindex="-1" aria-labelledby="planModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="planModalLabel">Nome do Plano</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 id="planModalPrice" class="fw-bold"></h3>
+                    <p id="planModalSub" class="text-muted"></p>
+                    <hr>
+                    <p class="fw-bold">O que está incluso:</p>
+                    <ul id="planModalFeatures" class="list-unstyled plan-feature-list">
+                        <!-- Features will be injected by JS -->
+                    </ul>
+                </div>
+                <div class="modal-footer border-0">
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20contratar%20um%20plano." class="btn btn-primary w-100"><i class="fab fa-whatsapp me-2"></i>Contratar este plano</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5511999999999?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
