@@ -147,13 +147,13 @@ h1, h2, h3, h4, h5, h6 {
     width: 20px;
 }
 
-/* --- Portfolio Section --- */
+/* --- Portfolio Section Compacta --- */
 .portfolio-card {
     transition: all 0.3s ease;
     border: none;
     border-radius: 0.75rem;
-    max-height: 360px; /* Limita altura */
-    overflow: hidden;  /* Evita transbordo */
+    max-height: 280px; /* Altura total menor */
+    overflow: hidden;
 }
 
 .portfolio-card:hover {
@@ -163,17 +163,18 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio-card img {
     border-top-left-radius: 0.75rem;
     border-top-right-radius: 0.75rem;
-    height: 180px; /* Imagem menor */
-    object-fit: cover; /* Corta proporcionalmente */
+    height: 140px; /* Antes 180px */
+    object-fit: cover;
 }
 
 .portfolio-card .card-body {
-    padding: 15px; /* Menos espaço interno */
+    padding: 10px; /* Antes 15px */
 }
 
 .portfolio-slider .swiper-slide {
-    padding-bottom: 20px; /* Antes 50px */
+    padding-bottom: 15px; /* Antes 50px */
 }
+
 
 /* --- Testimonials Section --- */
 .testimonial-item {
