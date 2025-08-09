@@ -1,8 +1,23 @@
+/* --- CSS Variables --- */
+:root {
+    --primary-color: #007BFF;
+    --primary-hover: #0056b3;
+    --transition-time: 0.3s ease;
+    --shadow-light: 0 .125rem .25rem rgba(0,0,0,.075);
+    --shadow-hover: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --font-family: 'Poppins', sans-serif;
+    --text-color: #444;
+    --border-radius-lg: 1rem;
+    --border-radius-md: 0.75rem;
+    --border-radius-sm: 0.5rem;
+}
+
 /* --- Global Styles & Fonts --- */
 body {
-    font-family: 'Poppins', sans-serif;
-    color: #444;
+    font-family: var(--font-family);
+    color: var(--text-color);
     position: relative;
+    font-size: 1rem; /* Base para escalabilidade */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -10,53 +25,65 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-    background-color: #007BFF;
-    border-color: #007BFF;
-    padding: 10px 25px;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 0.625rem 1.5625rem; /* px para rem: 10px=0.625rem, 25px=1.5625rem */
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: var(--transition-time);
+    cursor: pointer;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
     transform: translateY(-2px);
+    outline: 2px solid var(--primary-color); /* Acessibilidade */
 }
 
 .btn-outline-light {
-    padding: 10px 25px;
+    padding: 0.625rem 1.5625rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: var(--transition-time);
+    cursor: pointer;
 }
 
-.btn-outline-light:hover {
+.btn-outline-light:hover,
+.btn-outline-light:focus {
     transform: translateY(-2px);
+    outline: 2px solid var(--primary-color);
 }
 
 .shadow-sm {
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+    box-shadow: var(--shadow-light);
 }
 
 /* --- Header --- */
 #header {
     transition: top 0.4s ease-out;
     z-index: 997;
-    padding: 10px 0;
+    padding: 0.625rem 0;
+    position: sticky; /* Sugestão para sticky header */
+    top: 0;
 }
 
 .navbar-brand img {
-    max-height: 40px;
+    max-height: 2.5rem; /* 40px para rem */
 }
 
 .nav-link {
     font-weight: 500;
-    color: #555 !important;
-    margin: 0 10px;
-    transition: color 0.3s;
+    color: #555;
+    margin: 0 0.625rem;
+    transition: color var(--transition-time);
+    text-decoration: none; /* Remover underline */
 }
 
-.nav-link:hover, .nav-link.active {
-    color: #007BFF !important;
+.nav-link:hover,
+.nav-link.active,
+.nav-link:focus {
+    color: var(--primary-color);
+    outline: 2px solid var(--primary-color); /* Acessibilidade */
 }
 
 /* --- Hero Section --- */
@@ -66,73 +93,77 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(135deg, rgba(0, 123, 255, 0.9), rgba(0, 86, 179, 0.95)), url('https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop') center center no-repeat;
     background-size: cover;
     position: relative;
-    padding-top: 80px;
+    padding-top: calc(5rem + 2vh); /* Responsivo */
 }
 
 /* --- Features Section --- */
 .feature-icon {
     font-size: 2rem;
-    color: #007BFF;
+    color: var(--primary-color);
     margin: 0 auto;
-    width: 60px;
-    height: 60px;
+    width: 3.75rem;
+    height: 3.75rem;
     background-color: #e6f2ff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: var(--transition-time);
 }
 
 #features .card:hover .feature-icon {
-    background-color: #007BFF;
+    background-color: var(--primary-color);
     color: #fff;
 }
 
 #features .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: var(--transition-time);
+    will-change: transform; /* Otimização de performance */
 }
 
 #features .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    box-shadow: var(--shadow-hover);
 }
 
 /* --- Plans Section --- */
 #planos .plan-card {
     border: 1px solid #e9ecef;
-    border-radius: 1rem;
-    transition: all 0.3s ease;
+    border-radius: var(--border-radius-lg);
+    transition: var(--transition-time);
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    will-change: transform;
 }
 
 #planos .plan-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    box-shadow: var(--shadow-hover);
 }
 
 #planos .plan-card .btn-primary {
-    background-color: #007BFF;
+    background-color: var(--primary-color);
 }
 
-#planos .plan-card:nth-child(2) .btn-primary {
+/* Use classe em vez de nth-child para flexibilidade */
+#planos .plan-recommended .btn-primary {
     box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.4);
 }
 
 .plan-popular {
-    border: 2px solid #007BFF;
+    border: 2px solid var(--primary-color);
 }
 
 .plan-badge {
     position: absolute;
     top: 15px;
     right: -45px;
-    background-color: #007BFF;
+    background-color: var(--primary-color);
     color: white;
     padding: 5px 40px;
     transform: rotate(45deg);
+    transform-origin: center; /* Precisão */
     font-size: 0.8rem;
     font-weight: 600;
 }
@@ -147,12 +178,12 @@ h1, h2, h3, h4, h5, h6 {
     width: 20px;
 }
 
-
 /* --- Portfolio Section --- */
 .portfolio-card {
-    transition: all 0.3s ease;
+    transition: var(--transition-time);
     border: none;
-    border-radius: 0.75rem;
+    border-radius: var(--border-radius-md);
+    will-change: transform;
 }
 
 .portfolio-card:hover {
@@ -160,43 +191,48 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-card img {
-    border-top-left-radius: 0.75rem;
-    border-top-right-radius: 0.75rem;
+    border-top-left-radius: var(--border-radius-md);
+    border-top-right-radius: var(--border-radius-md);
+    object-fit: cover; /* Evitar distorções */
 }
 
 .portfolio-slider .swiper-slide {
     padding-bottom: 50px; /* Space for pagination */
 }
 
-/* --- Swiper General Styles --- */
+/* --- Swiper General Styles (Consolidado) --- */
 .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
     background-color: #ccc;
     opacity: 1;
-    transition: background-color 0.3s, width 0.3s;
+    transition: background-color var(--transition-time), width var(--transition-time);
 }
 
 .swiper-pagination-bullet-active {
     width: 30px;
     border-radius: 6px;
-    background-color: #007BFF;
+    background-color: var(--primary-color);
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: #007BFF;
+    color: var(--primary-color);
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     width: 44px;
     height: 44px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    transition: var(--transition-time);
 }
+
 .swiper-button-next:hover,
-.swiper-button-prev:hover {
-    background-color: #007BFF;
+.swiper-button-prev:hover,
+.swiper-button-next:focus,
+.swiper-button-prev:focus {
+    background-color: var(--primary-color);
     color: #fff;
+    outline: 2px solid var(--primary-color); /* Acessibilidade */
 }
 
 .swiper-button-next:after,
@@ -216,6 +252,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 50%;
     border: 4px solid #fff;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    object-fit: cover; /* Para imagens */
 }
 
 .testimonials-slider {
@@ -223,52 +260,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .testimonials-pagination {
-    bottom: 0 !important;
-}
-
-.swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background-color: #ccc;
-    opacity: 1;
-    transition: background-color 0.3s, width 0.3s;
-}
-
-.swiper-pagination-bullet-active {
-    width: 30px;
-    border-radius: 6px;
-    background-color: #007BFF;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    color: #007BFF;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    background-color: #007BFF;
-    color: #fff;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-    font-size: 1.2rem;
-    font-weight: bold;
+    bottom: 0;
 }
 
 /* --- CTA Section --- */
 #cta {
-    background: linear-gradient(135deg, #007BFF, #0056b3);
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
 }
 
 .social-links-cta a {
-    width: 150px;
+    width: auto; /* Remover width fixa para flexibilidade */
+    min-width: 150px; /* Mínimo para layout */
 }
 
 /* --- Footer --- */
@@ -276,11 +278,14 @@ footer {
     background-color: #f8f9fa;
     border-top: 1px solid #e9ecef;
 }
+
 footer .social-icon i {
-    transition: color 0.3s ease;
+    transition: color var(--transition-time);
 }
-footer .social-icon:hover i {
-    color: #007BFF;
+
+footer .social-icon:hover i,
+footer .social-icon:focus i {
+    color: var(--primary-color);
 }
 
 /* --- WhatsApp Float Button --- */
@@ -300,20 +305,42 @@ footer .social-icon:hover i {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease;
+    transition: var(--transition-time);
 }
 
-.whatsapp-float:hover {
+.whatsapp-float:hover,
+.whatsapp-float:focus {
     transform: scale(1.1);
     color: #fff;
+    outline: 2px solid #25D366; /* Acessibilidade */
 }
 
-/* -- Scroll Reveal Animation --- */
+/* --- Scroll Reveal Animation --- */
 .reveal-up, .reveal-down, .reveal-left, .reveal-right {
     visibility: hidden;
 }
 
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
 /* --- Responsiveness --- */
+@media (max-width: 992px) { /* Tablets */
+    #hero {
+        padding-top: 4rem;
+    }
+    .nav-link {
+        margin: 0.5rem 0; /* Stack nav em mobile */
+    }
+    #planos .plan-card {
+        margin-bottom: 1rem; /* Espaço em stack */
+    }
+}
+
 @media (max-width: 768px) {
     #hero {
         text-align: center;
@@ -324,5 +351,22 @@ footer .social-icon:hover i {
         bottom: 20px;
         right: 20px;
         font-size: 24px;
+    }
+    body {
+        font-size: 0.95rem; /* Ajuste leve */
+    }
+}
+
+@media (max-width: 576px) { /* Mobile pequeno */
+    body {
+        font-size: 0.9rem;
+    }
+    .btn-primary,
+    .btn-outline-light {
+        padding: 0.5rem 1rem; /* Menor em small screens */
+    }
+    .feature-icon {
+        width: 3rem;
+        height: 3rem;
     }
 }
