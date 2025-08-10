@@ -147,6 +147,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 20px;
 }
 
+
 /* --- Portfolio Section --- */
 .portfolio-card {
     transition: all 0.3s ease;
@@ -205,16 +206,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --- Testimonials Section --- */
-.testimonials-slider .swiper-slide {
-    padding-bottom: 50px; /* Space for pagination */
-}
-
-.testimonial-card {
-    border: none;
-    border-radius: 0.75rem;
-    height: 100%;
-}
-
 .testimonial-item {
     padding: 0 20px 40px 20px;
 }
