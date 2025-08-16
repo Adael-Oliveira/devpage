@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    });
+    }, { passive: true });
 
     // Testimonials Slider (Swiper)
     new Swiper('.testimonials-slider', {
@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
             delay: 5000,
             disableOnInteraction: false
         },
-        slidesPerView: 'auto',
         pagination: {
             el: '.testimonials-pagination',
             type: 'bullets',
@@ -77,11 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             768: {
                 slidesPerView: 2,
-                spaceBetween: 20
+                spaceBetween: 30
             },
             1200: {
                 slidesPerView: 3,
-                spaceBetween: 20
+                spaceBetween: 30
             }
         }
     });
@@ -140,7 +139,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const planModal = document.getElementById('planModal');
     if (planModal) {
         planModal.addEventListener('show.bs.modal', function(event) {
-            const card = event.relatedTarget;
+            // The relatedTarget is the element that triggered the modal.
+            // In our case it can be the card, or an element inside it.
+            // .closest ensures we get the parent card.
+            const card = event.relatedTarget.closest('.plan-card'); 
+            if (!card) return;
             
             const planName = card.getAttribute('data-plan-name');
             const planPrice = card.getAttribute('data-plan-price');
@@ -151,6 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const modalPrice = planModal.querySelector('#planModalPrice');
             const modalSub = planModal.querySelector('#planModalSub');
             const modalFeaturesList = planModal.querySelector('#planModalFeatures');
+            const modalCta = planModal.querySelector('#planModalCta');
             
             modalTitle.textContent = planName;
             modalPrice.innerHTML = planPrice;
@@ -163,6 +167,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 li.innerHTML = `<i class="fas ${iconClass} me-2"></i>${feature.item}`;
                 modalFeaturesList.appendChild(li);
             });
+
+            // Update CTA button link
+            const whatsappNumber = '5511999999999';
+            const baseMessage = `Olá! Gostaria de mais informações sobre o Plano ${planName}.`;
+            const encodedMessage = encodeURIComponent(baseMessage);
+            modalCta.href = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
         });
     }
 
